@@ -38,7 +38,7 @@ jobs:
       - name: Lint 💅
         run: pnpm run lint
 
-  test:
+  export:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo 🛫
@@ -67,8 +67,8 @@ jobs:
             ${{ runner.os }}-pnpm-
       - name: Install 🐦
         run: pnpm install
-      - name: Run test 🧪
-        run: pnpm run test
+      - name: Run test 🚢
+        run: pnpm run export
 
   build:
     runs-on: ubuntu-latest
@@ -101,3 +101,4 @@ jobs:
         run: pnpm install
       - name: Run build 🏗
         run: pnpm run build
+

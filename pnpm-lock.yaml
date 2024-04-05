@@ -16,7 +16,7 @@ devDependencies:
     version: 1.0.12(@vue/compiler-sfc@3.4.21)(eslint@9.0.0-rc.0)(typescript@5.4.4)
   '@slidev/cli':
     specifier: ^0.48.2
-    version: 0.48.8(@types/markdown-it@13.0.7)(@types/node@20.12.4)(@vue/compiler-sfc@3.4.21)(postcss@8.4.38)
+    version: 0.48.8(@types/markdown-it@13.0.7)(@types/node@20.12.4)(@vue/compiler-sfc@3.4.21)(playwright-chromium@1.43.0)(postcss@8.4.38)
   '@slidev/theme-default':
     specifier: latest
     version: 0.25.0
@@ -35,6 +35,9 @@ devDependencies:
   lint-staged:
     specifier: ^15.2.2
     version: 15.2.2
+  playwright-chromium:
+    specifier: ^1.43.0
+    version: 1.43.0
   vue:
     specifier: ^3.4.21
     version: 3.4.21(typescript@5.4.4)
@@ -1407,7 +1410,7 @@ packages:
     dev: true
     optional: true
 
-  /@slidev/cli@0.48.8(@types/markdown-it@13.0.7)(@types/node@20.12.4)(@vue/compiler-sfc@3.4.21)(postcss@8.4.38):
+  /@slidev/cli@0.48.8(@types/markdown-it@13.0.7)(@types/node@20.12.4)(@vue/compiler-sfc@3.4.21)(playwright-chromium@1.43.0)(postcss@8.4.38):
     resolution: {integrity: sha512-cuaU5ae6KPy1tv590atRjubEeDT2BFT2Ws9LLbiMuPr+Gpu9IU9QaX8nW20goI9Ym/4v+gjPhCFOB9qtekI7xA==}
     engines: {node: '>=18.0.0'}
     hasBin: true
@@ -1459,6 +1462,7 @@ packages:
       open: 10.1.0
       pdf-lib: 1.17.1
       plantuml-encoder: 1.4.0
+      playwright-chromium: 1.43.0
       postcss-nested: 6.0.1(postcss@8.4.38)
       prismjs: 1.29.0
       prompts: 2.4.2
@@ -6315,6 +6319,21 @@ packages:
 
   /plantuml-encoder@1.4.0:
     resolution: {integrity: sha512-sxMwpDw/ySY1WB2CE3+IdMuEcWibJ72DDOsXLkSmEaSzwEUaYBT6DWgOfBiHGCux4q433X6+OEFWjlVqp7gL6g==}
+    dev: true
+
+  /playwright-chromium@1.43.0:
+    resolution: {integrity: sha512-WeytzaCdiSL7NfGr6Pix/LTrnVixo5apb0q3SjgDQ9xtLYq0QCB9WanzDj2GI7DCmPEIhdCpvC2MRAjuJUUZyA==}
+    engines: {node: '>=16'}
+    hasBin: true
+    requiresBuild: true
+    dependencies:
+      playwright-core: 1.43.0
+    dev: true
+
+  /playwright-core@1.43.0:
+    resolution: {integrity: sha512-iWFjyBUH97+pUFiyTqSLd8cDMMOS0r2ZYz2qEsPjH8/bX++sbIJT35MSwKnp1r/OQBAqC5XO99xFbJ9XClhf4w==}
+    engines: {node: '>=16'}
+    hasBin: true
     dev: true
 
   /pluralize@8.0.0:
